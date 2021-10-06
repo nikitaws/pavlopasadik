@@ -927,11 +927,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <script type="text/javascript" src="assets_pages/js/m1ref.js"></script>
 <script type="text/javascript"> 
-var m1_product_id = 10524;
-var ref = 107354;
-var script = document.createElement("script");
-script.src = "//m1-shop.ru/send_order/?ref="+ref+"&s="+getC("s")+"&w="+getC("w")+"&t="+getC("t")+"&p="+getC("p")+"&m="+getC("m")+"&product_id="+m1_product_id+'&out=1';
-document.body.appendChild(script);
+
 </script>
 
 <script type="text/javascript">
@@ -1000,7 +996,6 @@ function sendData(client_name, client_phone, client_comment) {
     $.ajax({
         type: 'POST',
         data: data,
-        url: '//m1-shop.ru/send_order/',
         success: function(data) {
             data = JSON.parse(data);
             if (data.result == "ok") {
@@ -1076,7 +1071,6 @@ $(document).ready(function() {
             getFormData();
             $.ajax({
                 type: 'POST',
-                url: '//m1-shop.ru/send_stat_order/',
                 data: {
                     name: name,
                     phone: phone,
@@ -1100,7 +1094,7 @@ $(document).ready(function() {
         if (keyVal.length) {
             $.ajax({
                 type: 'POST',
-                url: '//m1-shop.ru/send_stat_order/',
+             
                 data: {
                     del: 1,
                     keyVal: keyVal
